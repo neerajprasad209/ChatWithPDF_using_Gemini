@@ -10,15 +10,16 @@ The MultiPDF Chat App is an innovative Python-based application designed to inte
 ![MultiPDF Chat App Diagram](./png/PDF-LangChain.jpg)
 
 
-1. **Document Ingestion**: The application commences by loading multiple PDF documents, meticulously extracting the textual data contained within each file.
+1. **PDF Loading:** The app reads multiple PDF documents and extracts their text content.
 
-2. **Data Segmentation**: Subsequent to extraction, the text is systematically segmented into manageable portions, optimizing the processing workflow.
+2. **Text Chunking:** The extracted text is divided into smaller chunks that can be processed effectively.
 
-3. **Cognitive Processing**: Utilizing an advanced language model, the app constructs vector representations, known as embeddings, for each segmented text portion, facilitating nuanced understanding.
+3. **Language Model:** Leveraging an open-source Embedding model from HuggingFace, the app creates vector representations of these chunks.
 
-4. **Semantic Analysis**: Upon receiving a user query, the application performs a semantic comparison between the query and the text embeddings, pinpointing the segments with the highest semantic correlation.
+4. **Similarity Matching:** When you ask a question, the app compares it with the text chunks and identifies the most semantically similar ones.
 
-5. **Intelligent Synthesis**: The final step involves the language model synthesizing a coherent and contextually relevant response, drawing from the content of the identified text segments.
+5. **Response Generation:** These chunks are then passed to the OpenAI LLM, which crafts a response that’s informed by the relevant PDF content.
+
 
 # Dependencies and Installation:
 
